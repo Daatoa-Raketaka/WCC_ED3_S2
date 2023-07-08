@@ -3,6 +3,7 @@ export const burgerBtn = document.querySelector('header>.navbar>.burger-btn') as
 export const exitMobileNavbar = mobileNavbar.querySelector('.exit') as HTMLElement
 export const mobileNavbarLinks = mobileNavbar.querySelectorAll('.link') as NodeList
 export const mobileComingSoon = mobileNavbar.querySelector('.coming-soon') as HTMLElement
+export const navbarLinks = document.querySelectorAll('header>.navbar>.links .link') as NodeList
 
 export function activateMobileNavbar(element: HTMLElement) {
   if (!element.classList.contains('active'))
