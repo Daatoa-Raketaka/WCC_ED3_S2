@@ -2,6 +2,7 @@ import './style.scss'
 import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deactivateMobileNavbar, mobileNavbarLinks, mobileComingSoon } from './modules/navbar.module'
 import { initAnimation } from './modules/animation.module'
 import { initScroll } from './modules/scroll.module'
+import { initMouse } from './modules/mouse.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -22,6 +23,7 @@ window.addEventListener('load', () => {
   document.querySelector('.overlay div:nth-child(6)')?.addEventListener('animationend', onLoadedAnimationEnd)
 
   initAnimation()
+  initMouse()
   initScroll()
 })
 

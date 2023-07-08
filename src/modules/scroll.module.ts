@@ -3,6 +3,8 @@ export function initScroll() {
         entries.forEach(entry => {
             const target = entry.target as HTMLElement
 
+            const currentTransition = target.style.transition
+
             if (entry.isIntersecting) {
                 target.classList.add(target.getAttribute('data-dr-scroll') as string)
                 target.style.transitionDelay = target.getAttribute('data-dr-delay') + 'ms'
@@ -10,9 +12,9 @@ export function initScroll() {
             }
             else {
                 target.classList.remove(target.getAttribute('data-dr-scroll') as string)
-                target.style.transitionDelay = '0ms'
-                target.style.transitionDuration = '0ms'
             }
+
+            target.addEventListener('animationend', () => target.style.transition = currentTransition)
         })
     }, {
         threshold: 0.5

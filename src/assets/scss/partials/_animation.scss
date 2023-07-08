@@ -3,12 +3,44 @@
     to { opacity: 1; transform: $to; }
 }
 
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes fade-zoom-in { @include fade-in(scale(0), scale(1)) }
+
 @keyframes fade-in-up { @include fade-in(translateY(100%), translateY(0%)) }
 @keyframes fade-in-bottom { @include fade-in(translateY(-100%), translateY(0%)) }
 @keyframes fade-in-right { @include fade-in(translateX(100%), translateX(0%)) }
 @keyframes fade-in-left { @include fade-in(translateY(-100%), translateY(0%)) }
 
+@keyframes game-controller {
+    0% { opacity: 1; transform: scale(0) rotateZ(15deg); }
+    60% { opacity: 1; transform: scale(1.2) rotateZ(30deg); }
+    100% { opacity: 1; transform: scale(1) rotateZ(15deg); }
+}
+
+@keyframes analog { @include fade-in(translate(0%, 0%) scale(0), translate(-150%, 0%) scale(1)) }
+@keyframes mini-gc { @include fade-in(translate(0%, 0%) scale(0), translate(-100%, 100%) scale(1)) }
+@keyframes nintendo { @include fade-in(translate(0%, 0%) scale(0), translate(150%, 0%) scale(1)) }
+@keyframes joystick { @include fade-in(translate(0%, 0%) scale(0), translate(150%, 100%) scale(1)) }
+
+.fade { opacity: 1; animation: fade; } 
+.fade-zoom-in { opacity: 1; animation: fade-zoom-in; }
+
 .fade-in-up { opacity: 1; animation: fade-in-up; }
 .fade-in-up-reverse { opacity: 0; animation: fade-in-up reverse; }
 .fade-in-bottom { opacity: 1; animation: fade-in-bottom; }
-.fade-in-up-reverse { opacity: 0; animation: fade-in-bottom reverse; }
+.fade-in-bottom-reverse { opacity: 0; animation: fade-in-bottom reverse; }
+.fade-in-right { opacity: 1; animation: fade-in-right; }
+.fade-in-right-reverse { opacity: 0; animation: fade-in-right reverse; }
+.fade-in-left { opacity: 1; animation: fade-in-left; }
+.fade-in-left-reverse { opacity: 0; animation: fade-in-left reverse; }
+
+.game-controller { opacity: 1; animation: game-controller; }
+.game-controller-reverse { animation: game-controller reverse; }
+
+.analog { opacity: 1; animation: analog ease; }
+.mini-gc { opacity: 1; animation: mini-gc ease; }
+.nintendo { opacity: 1; animation: nintendo ease; }
+.joystick { opacity: 1; animation: joystick ease; }
