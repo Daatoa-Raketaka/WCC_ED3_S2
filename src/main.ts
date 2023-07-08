@@ -1,8 +1,9 @@
 import './style.scss'
-import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deactivateMobileNavbar, mobileNavbarLinks, mobileComingSoon } from './modules/navbar.module'
+import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deactivateMobileNavbar, mobileNavbarLinks, mobileComingSoon, navbarLinks } from './modules/navbar.module'
 import { initAnimation } from './modules/animation.module'
 import { initScroll } from './modules/scroll.module'
 import { initMouse } from './modules/mouse.module'
+import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingModalOverlay } from './modules/racing-modal.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -32,8 +33,29 @@ function main() {
   exitMobileNavbar.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
   mobileComingSoon.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
   mobileNavbarLinks.forEach(link => {
-    link.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
+    link.addEventListener('click', (e) => {
+      deactivateMobileNavbar(mobileNavbar)
+      const currentLink = link as HTMLElement
+      if (currentLink.classList.contains('racing')) {
+        e.preventDefault()
+        if (!racingModal.classList.contains('active'))
+          racingModal.classList.add('active')
+      }
+    })
   })
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const currentLink = link as HTMLElement
+      if (currentLink.classList.contains('racing')) {
+        e.preventDefault()
+        if (!racingModal.classList.contains('active'))
+          racingModal.classList.add('active')
+      }
+    })
+  })
+  racingModalOverlay.addEventListener('click', () => hideRacingModal(racingModal))
+  exitRacingModal.addEventListener('click', () => hideRacingModal(racingModal))
+  playRacingModal.addEventListener('click', () => hideRacingModal(racingModal))
 }
 
 main()
