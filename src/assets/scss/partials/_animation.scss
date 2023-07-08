@@ -9,10 +9,10 @@
 }
 @keyframes fade-zoom-in { @include fade-in(scale(0), scale(1)) }
 
-@keyframes fade-in-up { @include fade-in(translateY(100%), translateY(0%)) }
-@keyframes fade-in-bottom { @include fade-in(translateY(-100%), translateY(0%)) }
-@keyframes fade-in-right { @include fade-in(translateX(100%), translateX(0%)) }
-@keyframes fade-in-left { @include fade-in(translateY(-100%), translateY(0%)) }
+@keyframes fade-in-up { @include fade-in(translateY(100px), translateY(0%)) }
+@keyframes fade-in-bottom { @include fade-in(translateY(-100px), translateY(0%)) }
+@keyframes fade-in-left { @include fade-in(translateX(100px), translateX(0%)) }
+@keyframes fade-in-right { @include fade-in(translateX(-100px), translateX(0%)) }
 
 @keyframes game-controller {
     0% { opacity: 1; transform: scale(0) rotateZ(15deg); }
