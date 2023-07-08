@@ -11,6 +11,11 @@ div.hero {
     p { font-size: 30px; }
     h1 { font-size: 70px; }
 
+    @media screen and (max-width: 1024px) {
+        p { font-size: 20px; }
+        h1 { font-size: 40px; }
+    }
+
     .highlight-btn {
         padding: 10px 15px;
         font-size: 16px;
