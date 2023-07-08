@@ -1,0 +1,30 @@
+div.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    z-index: 100;
+}
+
+.loaded {
+    div {
+        width: calc(100% / 12);
+        height: 100%;
+        background-color: yellow;
+        transform: translateY(0%);
+        animation: pre-loader steps(15) 1s;
+    }
+
+    @for $i from 1 to 7 {
+        div:nth-child(#{$i}), div:nth-child(#{13 - $i}) {
+            animation-delay: #{$i * 0.25}s;
+        }
+    }
+}
+
+@keyframes pre-loader {
+    from { transform: translateY(0%); }
+    to { transform: translateY(100%); }
+}
