@@ -1,0 +1,12 @@
+div.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white;
+    font-family: 'Clash Display';
+    height: 200vh;
+    text-align: center;
+
+    p { font-size: 30px; }
+    h1 { font-size: 70px; }
+}
