@@ -170,6 +170,7 @@ header {
     overflow-x: hidden;
     overflow-y: auto;
     transition: transform .3s ease-in-out;
+    z-index: 99;
 
     &.active {
       transform: translateX(0);
