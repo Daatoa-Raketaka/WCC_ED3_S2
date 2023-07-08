@@ -1,0 +1,306 @@
+@import "../partials/colors";
+@import "../partials/sizes";
+
+.our-games {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  height: max-content;
+  padding: $our-games-inline-padding max(5vw, $our-games-inline-padding);
+  color: $white;
+  font-family: "Clash Display", sans-serif;
+
+  .top-container {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: auto 250px;
+    grid-template-rows: auto;
+
+    @media screen and (max-width: 1024px) {
+      display: block;
+
+      .top-card {
+        position: relative;
+        margin-top: 30px;
+      }
+    }
+
+    .content {
+      position: relative;
+      width: max-content;
+      height: max-content;
+
+      .title {
+        position: relative;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        position: relative;
+        font-size: 16px;
+      }
+    }
+
+    .top-card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-color: $grey;
+      border-radius: 15px;
+      border: 1.5px solid $snake-card-color;
+      cursor: default;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, 50%);
+
+      .rank {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: max-content;
+        height: max-content;
+        padding: 10px;
+        font-family: "Clash Display", sans-serif;
+        background-color: $snake-card-color;
+        border-radius: 14px 0px 15px 0px;
+        z-index: 10;
+      }
+
+      .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          image-rendering: optimizeQuality;
+        }
+
+        svg {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+
+        .title {
+          position: relative;
+          font-size: 22px;
+        }
+
+        .notes {
+          position: relative;
+          width: max-content;
+          height: max-content;
+          margin-top: -10px;
+          margin-bottom: 10px;
+          color: $yellow;
+        }
+
+        .play-button {
+          position: relative;
+          width: 100%;
+          height: max-content;
+          padding: 10px 15px;
+          background-color: $snake-card-color;
+          border: 1.5px solid $snake-card-color;
+          font-size: 16px;
+          font-family: "Clash Display", sans-serif;
+          font-weight: 600;
+          border-radius: 20px;
+          color: $white;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            background-color: transparent;
+            color: $snake-card-color;
+          }
+        }
+      }
+    }
+  }
+
+  .other-games {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: auto;
+    column-gap: 15px;
+    row-gap: 15px;
+
+    .card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-color: $grey;
+      border-radius: 15px;
+      border: 1.5px solid $purple;
+      cursor: default;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(2, 50%);
+
+      /* 2nd Card */
+      &:nth-child(1) {
+        border: 1.5px solid $flappy-bird-card-color;
+
+        .rank {
+          background-color: $flappy-bird-card-color;
+        }
+
+        .img {
+          background-image: url("/public/flappy-bird.webp");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+
+        .content {
+          .play-button {
+            background-color: $flappy-bird-card-color;
+            border: 1.5px solid $flappy-bird-card-color;
+
+            &:hover {
+              color: $flappy-bird-card-color;
+            }
+          }
+        }
+      }
+
+      /* 3rd Card */
+      &:nth-child(2) {
+        border: 1.5px solid $red;
+
+        .rank {
+          background-color: $red;
+        }
+
+        .content {
+          .play-button {
+            background-color: $red;
+            border: 1.5px solid $red;
+
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+
+      /* 4th Card */
+      &:nth-child(2) {
+        border: 1.5px solid $red;
+
+        .rank {
+          background-color: $red;
+        }
+
+        .content {
+          .play-button {
+            background-color: $red;
+            border: 1.5px solid $red;
+
+            &:hover {
+              color: $red;
+            }
+          }
+        }
+      }
+
+      .rank {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: max-content;
+        height: max-content;
+        padding: 10px;
+        font-family: "Clash Display", sans-serif;
+        background-color: $purple;
+        border-radius: 14px 0px 15px 0px;
+        z-index: 10;
+      }
+
+      .img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        // img {
+        //   position: relative;
+        //   width: 100%;
+        //   height: 100%;
+        //   object-fit: cover;
+        //   image-rendering: optimizeQuality;
+        // }
+
+        svg {
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 10px 20px;
+
+        .title {
+          position: relative;
+          font-size: 22px;
+        }
+
+        .notes {
+          position: relative;
+          width: max-content;
+          height: max-content;
+          margin-block: 10px;
+          color: $yellow;
+        }
+
+        .play-button {
+          position: relative;
+          width: 100%;
+          height: max-content;
+          padding: 10px 15px;
+          background-color: $purple;
+          border: 1.5px solid $purple;
+          font-size: 16px;
+          font-family: "Clash Display", sans-serif;
+          font-weight: 600;
+          border-radius: 20px;
+          color: $white;
+          cursor: pointer;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            background-color: transparent;
+            color: $purple;
+          }
+        }
+      }
+    }
+  }
+}
