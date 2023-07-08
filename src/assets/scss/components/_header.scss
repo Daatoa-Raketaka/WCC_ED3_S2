@@ -169,10 +169,10 @@ header {
     transform: translateX(100%);
     overflow-x: hidden;
     overflow-y: auto;
+    transition: transform .3s ease-in-out;
 
     &.active {
       transform: translateX(0);
-      transition: transform .3s ease-in-out;
     }
 
     @media screen and (min-width: 1024px) {
