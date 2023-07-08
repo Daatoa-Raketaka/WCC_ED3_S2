@@ -1,0 +1,9 @@
+@mixin fade-in($from, $to) {
+    from { opacity: 0; transform: $from; }
+    to { opacity: 1; transform: $to; }
+}
+
+@keyframes fade-in-up { @include fade-in(translateY(100%), translateY(0%)) }
+@keyframes fade-in-bottom { @include fade-in(translateY(-100%), translateY(0%)) }
+@keyframes fade-in-right { @include fade-in(translateX(100%), translateX(0%)) }
+@keyframes fade-in-left { @include fade-in(translateY(-100%), translateY(0%)) }

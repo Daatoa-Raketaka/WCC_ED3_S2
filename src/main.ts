@@ -1,5 +1,6 @@
 import './style.scss'
 import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deactivateMobileNavbar, mobileNavbarLinks, mobileComingSoon } from './modules/navbar.module'
+import { initAnimation } from './modules/animation.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -27,6 +28,8 @@ function main() {
   mobileNavbarLinks.forEach(link => {
     link.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
   })
+
+  initAnimation()
 }
 
 main()
