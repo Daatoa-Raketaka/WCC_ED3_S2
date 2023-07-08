@@ -7,3 +7,8 @@
 @keyframes fade-in-bottom { @include fade-in(translateY(-100%), translateY(0%)) }
 @keyframes fade-in-right { @include fade-in(translateX(100%), translateX(0%)) }
 @keyframes fade-in-left { @include fade-in(translateY(-100%), translateY(0%)) }
+
+.fade-in-up { opacity: 1; animation: fade-in-up; }
+.fade-in-up-reverse { opacity: 0; animation: fade-in-up reverse; }
+.fade-in-bottom { opacity: 1; animation: fade-in-bottom; }
+.fade-in-up-reverse { opacity: 0; animation: fade-in-bottom reverse; }

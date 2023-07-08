@@ -1,6 +1,7 @@
 import './style.scss'
 import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deactivateMobileNavbar, mobileNavbarLinks, mobileComingSoon } from './modules/navbar.module'
 import { initAnimation } from './modules/animation.module'
+import { initScroll } from './modules/scroll.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -19,6 +20,9 @@ window.addEventListener('load', () => {
     target.removeEventListener('animationend', onLoadedAnimationEnd)
   }
   document.querySelector('.overlay div:nth-child(6)')?.addEventListener('animationend', onLoadedAnimationEnd)
+
+  initAnimation()
+  initScroll()
 })
 
 function main() {
@@ -28,8 +32,6 @@ function main() {
   mobileNavbarLinks.forEach(link => {
     link.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
   })
-
-  initAnimation()
 }
 
 main()
