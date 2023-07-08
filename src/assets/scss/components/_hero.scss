@@ -4,9 +4,48 @@ div.hero {
     align-items: center;
     color: $white;
     font-family: 'Clash Display';
-    height: 200vh;
+    height: 100vh;
+    padding: $hero-padding 0px;
     text-align: center;
 
     p { font-size: 30px; }
     h1 { font-size: 70px; }
+
+    .highlight-btn {
+        padding: 10px 15px;
+        font-size: 16px;
+        border: 1.5px solid $white;
+        box-shadow: 0px 0px 10px transparent;
+        border-radius: 20px;
+        font-family: "Clash Display", sans-serif;
+        transition: all .2s ease-in-out;
+        background-color: transparent;
+        color: $white;
+        margin: 20px 0px;
+
+        &:hover {
+          color: $light-blue;
+          text-shadow: 0px 0px 20px $light-blue;
+          border: 1.5px solid $light-blue;
+          box-shadow: 0px 0px 20px $light-blue;
+        }
+    }
+
+    .img-container {
+        margin: $hero-padding + 10px;
+        position: relative;
+        width: 100%;
+
+        img:nth-child(1) { transform: translate(-150%, 0%); }
+        img:nth-child(2) { transform: translate(-100%, 100%); }
+        img:nth-child(3) { transform: translate(150%, 0%); width: 350px; }
+        img:nth-child(4) { transform: translate(150%, 100%); }
+
+        .float {
+            position: absolute;
+            width: 300px;
+        }
+
+        .game-controller { transform: rotateZ(15deg); }
+    }
 }
