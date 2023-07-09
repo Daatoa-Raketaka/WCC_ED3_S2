@@ -36,5 +36,6 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: black;
+  background-color: var(--black);
+  transition: background-color .3s ease-in-out;
 }

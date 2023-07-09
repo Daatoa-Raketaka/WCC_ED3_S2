@@ -7,7 +7,7 @@ footer {
   height: max-content;
   padding-inline: max(5vw, $our-games-inline-padding);
   padding-block: $our-games-inline-padding 10px;
-  color: $white;
+  color: var(--white);
   font-family: "Clash Display", sans-serif;
 
   .title {
@@ -23,7 +23,7 @@ footer {
     position: relative;
     width: 100%;
     height: max-content;
-    color: $white;
+    color: var(--white);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -110,11 +110,11 @@ footer {
           width: 100%;
           background-color: transparent;
           border-radius: 20px 0px 0px 20px;
-          border-top: 1.5px solid $white;
-          border-bottom: 1.5px solid $white;
-          border-left: 1.5px solid $white;
+          border-top: 1.5px solid var(--white);
+          border-bottom: 1.5px solid var(--white);
+          border-left: 1.5px solid var(--white);
           font-family: "Clash Display", sans-serif;
-          color: $white;
+          color: var(--white);
         }
 
         button {
