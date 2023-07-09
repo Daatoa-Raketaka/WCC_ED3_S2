@@ -124,6 +124,12 @@ footer {
           border-radius: 0px 20px 20px 0px;
           background: linear-gradient(to right, $red, $purple, $blue);
           color: $white;
+          transition: background .2s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background: linear-gradient(to right, $blue, $purple, $red);
+          }
         }
       }
     }

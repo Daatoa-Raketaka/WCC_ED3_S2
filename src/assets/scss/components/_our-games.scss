@@ -85,7 +85,7 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
-        background-image: url("/public/snake-game.jpg");
+        background-image: url("/snake-game.webp");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -177,7 +177,7 @@
         }
 
         .img {
-          background-image: url("/public/flappy-bird.webp");
+          background-image: url("/flappy-bird.webp");
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -204,7 +204,7 @@
         }
 
         .img {
-          background-image: url("/public/contra-game.jpg");
+          background-image: url("/contra-game.webp");
           background-position: top center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -231,7 +231,7 @@
         }
 
         .img {
-          background-image: url("/public/super-mario-bros.jpg");
+          background-image: url("/super-mario-bros.webp");
           background-position: bottom center;
           background-size: cover;
           background-repeat: no-repeat;
