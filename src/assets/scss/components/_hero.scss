@@ -10,6 +10,10 @@ div.hero {
     padding: $hero-padding 0px;
     text-align: center;
     transition: color .2s ease-in-out;
+    background-image: url("/hero-gradient.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     p { font-size: 30px; }
     h1 {
