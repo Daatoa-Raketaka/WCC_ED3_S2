@@ -1,0 +1,134 @@
+:root {
+    --white: #fff;
+    --yellow: #f9d78e;
+    --dark: #2e221f;
+}
+
+::-webkit-scrollbar { display: none; }
+
+@font-face {
+    font-family: 'MadeOkine';
+    src: url('../../fonts/MADE-Okine-Sans-Font-Family/MADEOkineSansPERSONALUSE-Light.otf');
+}
+
+@keyframes fade {
+    0% { opacity: 0%; }
+    100% { opacity: 100%; }
+}
+
+@keyframes vibrancy {
+    0% { filter: drop-shadow(0px 0px 50px #f9d78e); }
+    50% { filter: drop-shadow(0px 0px 10px #f9d78e88); }
+    100% { filter: drop-shadow(0px 0px 50px #f9d78e); }
+}
+
+@keyframes title-fade-in {
+    0% { transform: translateX(-100%); opacity: 0%; }
+    100% { transform: translateX(0); opacity: 100%; }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'MadeOkine';
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+.container {
+    background-image: url('../../pages/wood-texture.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    image-rendering: optimizeQuality;
+}
+
+/* POSITIONS */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.absolute.top-0 { top: 0; }
+.absolute.bottom-0 { bottom: 0; }
+.absolute.right-0 { right: 0; }
+.absolute.left-0 { left: 0; }
+
+/* DISPLAYS */
+.flex { display: flex; }
+.flex.justify-center { justify-content: center; }
+.flex.justify-between { justify-content: space-between; }
+.flex.justify-around { justify-content: space-around; }
+.flex.align-center { align-items: center; }
+.flex.align-between { align-items: space-between; }
+.flex.align-around { align-items: space-around; }
+.flex.direction-col { flex-direction: column; }
+.flex.direction-row { flex-direction: row; }
+
+/* WIDTH & HEIGHT */
+.width-100 { width: 100%; }
+.width-100vw { width: 100vw; }
+.width-50 { width: 50%; }
+.width-50vw { width: 50vw; }
+.width-50vh { width: 50vh; }
+.height-100 { height: 100%; }
+.height-100vh { height: 100vh; }
+.height-50 { height: 50%; }
+.height-50vh { height: 50vh; }
+.height-50-vw { height: 50vw; }
+
+/* TRANSITIONS */
+.transition-all-300 { transition: all 300ms; }
+.transition-all-350 { transition: all 350ms; }
+
+/* TEXTS */
+.text-center { text-align: center; }
+.text-yellow { color: var(--yellow); }
+.text-dark { color: var(--dark); }
+.text-white { color: var(--white); }
+
+
+/* SVG */
+.fill-dark { fill: var(--dark); }
+.fill-yellow { fill: var(--yellow); }
+.fill-white { fill: var(--white); }
+
+/* TRANSFORMS */
+.translateX-n100 { transform: translateX(-100%); }
+
+/* Return button */
+.return-btn {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    padding: 1vw;
+    margin-top: 5vh;
+    font-size: 2vw;
+    cursor: pointer;
+    outline: none;
+}
+
+.return-btn:hover {
+    color: var(--dark);
+    transition: all 300ms;
+}
+
+/* MUSIC */
+.audio-help {
+    background-color: #ffffff77;
+    color: var(--white);
+    padding: 0.4vw 1vw;
+    font-size: 1.5vw;
+    margin-left: 7vw;
+    border-radius: 5px;
+    opacity: 30%;
+    cursor: not-allowed;
+    transition: all 350ms;
+}
+
+.audio-help span {
+    color: var(--yellow);
+    transition: all 350ms;
+}
+
+.audio-help:hover {
+    opacity: 100%;
+}

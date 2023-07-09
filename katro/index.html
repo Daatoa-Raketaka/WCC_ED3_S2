@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common/css/style.css">
+    <title>Bobolilita - Katro Game</title>
+    <style>
+        #welcome-bg { background-color: var(--dark); }
+        #welcome-title,
+        #welcome-img { animation-name: title-fade-in; animation-duration: 1s; animation-iteration-count: 1; font-size: 5vw; }
+        #welcome-p { visibility: hidden; font-size: 3.5vw; }
+        #welcome-img { width: 15vw; height: 15vw; }
+        #welcome-menu-btn { visibility: hidden; }
+        #welcome-menu-btn:hover { color: var(--yellow); }
+    </style>
+</head>
+<body>
+
+    <div class="absolute top-0 left-0 width-100 height-100 flex direction-col justify-center align-center" id="welcome-bg">
+        <img src="./pages/yellow-logo.png" alt="welcome-img" id="welcome-img">
+        <h1 class="text-white" id="welcome-title">Bobolilita presents</h1>
+        <p class="text-white" id="welcome-p">Katro Game</p>
+        <button class="return-btn" id="welcome-menu-btn" onclick="goTo('./pages/welcome/index.html', '')">Menu</button>
+    </div>
+    
+    <script>
+        (function() {
+            const h1 = document.getElementById('welcome-title')
+            const p = document.getElementById('welcome-p')
+            const button = document.getElementById('welcome-menu-btn')
+            const img = document.getElementById('welcome-img')
+
+            h1.addEventListener('animationend', () => { 
+                p.style.animationName = 'title-fade-in'
+                p.style.animationDuration = '1s'
+                p.style.animationIterationCount = '1'
+                p.style.visibility = 'visible'
+            })
+
+            p.addEventListener('animationend', () => {
+                button.style.animationName = 'title-fade-in'
+                button.style.animationDuration = '1.5s'
+                button.style.animationIterationCount = '1'
+                button.style.visibility = 'visible'
+                button.style.zIndex = '1'
+            })
+        })()
+    </script>
+    <script src="common/js/index.js"></script>
+</body>
+</html>

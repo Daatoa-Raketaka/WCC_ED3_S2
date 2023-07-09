@@ -1,0 +1,17 @@
+svg {
+    width: 13vw;
+    height: 13vw;
+}
+
+p {
+    font-size: 2vw;
+    padding: 0px 1vw;
+    cursor: pointer;
+}
+
+p:hover {
+    outline-style: solid;
+    outline-width: 0.5px;
+    outline-color: var(--dark);
+    border-radius: 5px;
+}
