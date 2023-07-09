@@ -3,7 +3,9 @@ import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deacti
 import { initAnimation } from './modules/animation.module'
 import { initScroll } from './modules/scroll.module'
 import { initMouse } from './modules/mouse.module'
-import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingModalOverlay } from './modules/racing-modal.module'
+import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingModalOverlay, showRacingModal } from './modules/racing-modal.module'
+import { exitPlatformerModal, hidePlatformerModal, platformerModalOverlay, playPlatformerModal, showPlatformerModal } from './modules/platformer-modal.module'
+import { scrollToTop, scrollToTopBtn } from './modules/scroll-to-top.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -38,8 +40,11 @@ function main() {
       const currentLink = link as HTMLElement
       if (currentLink.classList.contains('racing')) {
         e.preventDefault()
-        if (!racingModal.classList.contains('active'))
-          racingModal.classList.add('active')
+        showRacingModal()
+      }
+      else if (currentLink.classList.contains('platformer')) {
+        e.preventDefault()
+        showPlatformerModal()
       }
     })
   })
@@ -48,14 +53,23 @@ function main() {
       const currentLink = link as HTMLElement
       if (currentLink.classList.contains('racing')) {
         e.preventDefault()
-        if (!racingModal.classList.contains('active'))
-          racingModal.classList.add('active')
+        showRacingModal()
+      }
+      else if (currentLink.classList.contains('platformer')) {
+        e.preventDefault()
+        showPlatformerModal()
       }
     })
   })
-  racingModalOverlay.addEventListener('click', () => hideRacingModal(racingModal))
-  exitRacingModal.addEventListener('click', () => hideRacingModal(racingModal))
-  playRacingModal.addEventListener('click', () => hideRacingModal(racingModal))
+  racingModalOverlay.addEventListener('click', hideRacingModal)
+  exitRacingModal.addEventListener('click', hideRacingModal)
+  playRacingModal.addEventListener('click', hideRacingModal)
+
+  platformerModalOverlay.addEventListener('click', hidePlatformerModal)
+  exitPlatformerModal.addEventListener('click', hidePlatformerModal)
+  playPlatformerModal.addEventListener('click', hidePlatformerModal)
+
+  scrollToTopBtn.addEventListener('click', scrollToTop)
 }
 
 main()
