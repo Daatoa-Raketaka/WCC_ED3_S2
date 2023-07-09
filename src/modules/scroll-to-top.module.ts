@@ -2,4 +2,5 @@ export const scrollToTopBtn = document.querySelector('.scroll-to-top') as HTMLEl
 
 export function scrollToTop() {
   document.body.scrollTo({ top: 0 })
+  window.location.href = '#'
 }
