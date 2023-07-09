@@ -15,7 +15,6 @@ export function initSlider() {
     document.body.addEventListener('scroll', () => {
         const elementTop = element.getBoundingClientRect().top
         const scrollPos = document.body.scrollTop - elementTop
-        console.log(scrollPos)
         if (scrollPos > -200) {
             element.style.transform = `rotateZ(5deg) translateX(-${(scrollPos + 200) * 0.01}%)`
         }
