@@ -1,0 +1,25 @@
+@import "../partials/colors";
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 98;
+  backdrop-filter: invert(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  border: 1.5px solid transparent;
+
+  &:hover {
+    backdrop-filter: invert(0);
+    mix-blend-mode: difference;
+    color: $white;
+    border-color: $white;
+  }
+}
