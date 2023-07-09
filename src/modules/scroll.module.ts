@@ -21,8 +21,8 @@ export function initScroll() {
     })
 
     document.querySelectorAll('[data-dr-scroll]').forEach(el => {        
-        el.style.animationDelay = el.getAttribute('data-dr-delay') + 'ms'
-        el.style.animationDuration = el.getAttribute('data-dr-duration') + 'ms'
+        (el as HTMLElement).style.animationDelay = el.getAttribute('data-dr-delay') + 'ms';
+        (el as HTMLElement).style.animationDuration = el.getAttribute('data-dr-duration') + 'ms'
 
         intersectionObserver.observe(el)
     })

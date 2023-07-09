@@ -3,7 +3,7 @@ import { activateMobileNavbar, mobileNavbar, burgerBtn, exitMobileNavbar, deacti
 import { initAnimation } from './modules/animation.module'
 import { initScroll } from './modules/scroll.module'
 import { initMouse } from './modules/mouse.module'
-import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingModalOverlay, showRacingModal } from './modules/racing-modal.module'
+import { exitRacingModal, hideRacingModal, playRacingModal, racingModalOverlay, showRacingModal } from './modules/racing-modal.module'
 import { exitPlatformerModal, hidePlatformerModal, platformerModalOverlay, playPlatformerModal, showPlatformerModal } from './modules/platformer-modal.module'
 import { scrollToTop, scrollToTopBtn } from './modules/scroll-to-top.module'
 import { desktopThemeBtn, detectTheme, mobileThemeBtn, toggleTheme } from './modules/theme.module'
@@ -12,6 +12,7 @@ import { initSlider } from './modules/slider.module'
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
   overlay.classList.add('loaded')
+  overlay.style.backgroundColor = 'transparent'
 
   const onEnd = (ev: Event) => {
     const target = (ev.target as HTMLElement)
