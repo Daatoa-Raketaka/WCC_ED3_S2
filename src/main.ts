@@ -4,6 +4,7 @@ import { initAnimation } from './modules/animation.module'
 import { initScroll } from './modules/scroll.module'
 import { initMouse } from './modules/mouse.module'
 import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingModalOverlay } from './modules/racing-modal.module'
+import { initSlider } from './modules/slider.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -26,6 +27,9 @@ window.addEventListener('load', () => {
   initAnimation()
   initMouse()
   initScroll()
+  initSlider()
+
+  window.addEventListener('resize', initSlider)
 })
 
 function main() {
