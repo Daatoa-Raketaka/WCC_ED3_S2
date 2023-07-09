@@ -10,7 +10,7 @@
   }
 }
 
-.racing-modal {
+.platformer-modal {
   position: fixed;
   display: none;
   top: 0;
@@ -95,8 +95,8 @@
       position: relative;
       width: 100%;
       height: 100%;
-      background: linear-gradient(to left, $black-gradient, $black-gradient-2, $white), url("/racing-game.webp");
-      background-position: center;
+      background: linear-gradient(to left, $black-gradient, $black-gradient-2, $white), url("/platformer-game.webp");
+      background-position: left top;
       background-repeat: no-repeat;
       background-size: cover;
       background-blend-mode: multiply;

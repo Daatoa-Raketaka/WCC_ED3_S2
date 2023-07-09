@@ -3,12 +3,12 @@ export const racingModalOverlay = racingModal.querySelector('.overlay') as HTMLE
 export const exitRacingModal = racingModal.querySelector('.footer>.exit-btn') as HTMLElement
 export const playRacingModal = racingModal.querySelector('.footer>.play-btn') as HTMLElement
 
-export function showRacingModal(element: HTMLElement) {
-  if (!element.classList.contains('active'))
-    element.classList.add('active')
+export function showRacingModal() {
+  if (!racingModal.classList.contains('active'))
+    racingModal.classList.add('active')
 }
 
-export function hideRacingModal(element: HTMLElement) {
-  if (element.classList.contains('active'))
-    element.classList.remove('active')
+export function hideRacingModal() {
+  if (racingModal.classList.contains('active'))
+    racingModal.classList.remove('active')
 }

@@ -1,0 +1,150 @@
+@import "../partials/sizes";
+@import "../partials/colors";
+
+footer {
+  position: relative;
+  width: 100%;
+  height: max-content;
+  padding-inline: max(5vw, $our-games-inline-padding);
+  padding-block: $our-games-inline-padding 10px;
+  color: var(--white);
+  font-family: "Clash Display", sans-serif;
+
+  .title {
+    font-size: 30px;
+    text-align: left;
+
+    @media screen and (min-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .socials {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block: 20px;
+
+    @media screen and (min-width: 768px) {
+      justify-content: center;
+    }
+
+    .social {
+      position: relative;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      margin: 0px 10px 0px 0px;
+
+      @media screen and (min-width: 768px) {
+        margin: 0px 10px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .mail-sender {
+    position: relative;
+    width: 100%;
+    height: max-content;
+
+    .text {
+      position: relative;
+      width: 100%;
+      height: max-content;
+      font-size: 16px;
+      text-align: left;
+
+      @media screen and (min-width: 768px) {
+        text-align: center;
+      }
+    }
+
+    .form-group {
+      position: relative;
+      width: 100%;
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 30px 0px 20px 0px;
+      border: none;
+
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+      }
+
+      .container {
+        position: relative;
+        width: max-content;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        font-size: 16px;
+        border-radius: 20px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
+
+        input,
+        button {
+          position: relative;
+          width: max-content;
+          height: 100%;
+          padding-inline: 15px;
+          border: none;
+        }
+        
+        input {
+          width: 100%;
+          background-color: transparent;
+          border-radius: 20px 0px 0px 20px;
+          border-top: 1.5px solid var(--white);
+          border-bottom: 1.5px solid var(--white);
+          border-left: 1.5px solid var(--white);
+          font-family: "Clash Display", sans-serif;
+          color: var(--white);
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0px 20px 20px 0px;
+          background: linear-gradient(to right, $red, $purple, $blue);
+          color: $white;
+          transition: background .2s ease-in-out;
+          cursor: pointer;
+
+          &:hover {
+            background: linear-gradient(to right, $blue, $purple, $red);
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    margin: 50px 0px 0px 0px;
+    text-align: left;
+
+    @media screen and (min-width: 768px) {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
