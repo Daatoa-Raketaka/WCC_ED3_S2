@@ -93,8 +93,8 @@
     <button class="highlight-btn" data-dr-scroll="fade" data-dr-delay="800" data-dr-duration="500">Hamantatra</button>
 
     <div class="img-container">
-      <img src="/analog.webp" alt="" class="float" data-dr-scroll="analog" data-dr-delay="1000"
-        data-dr-duration="1500" data-dr-mouse="-0.005">
+      <img src="/analog.webp" alt="" class="float" data-dr-scroll="analog" data-dr-delay="1000" data-dr-duration="1500"
+        data-dr-mouse="-0.005">
       <img src="/mini-game-controller.webp" alt="" class="float" data-dr-scroll="mini-gc" data-dr-delay="1000"
         data-dr-duration="1500" data-dr-mouse="-0.02">
       <img src="/nintendo.webp" alt="" class="float" data-dr-scroll="nintendo" data-dr-delay="1000"
@@ -255,6 +255,22 @@
     </div>
   </div>
 
+  <!-- Game of life -->
+  <div id="game-of-life">
+    <div id="title">
+      <h1>Game of Life</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, perferendis harum pariatur cupiditate, unde fugit libero, soluta ullam velit optio voluptas eum neque vero consequatur impedit placeat molestias consectetur debitis!</p>
+    </div>
+    <canvas id="game-of-life-canvas"></canvas>
+    <div id="game-of-life-generation">
+    </div>
+    <div id="game-of-life-buttons">
+      <input type="button" value="Kisendra" id="game-of-life-random">
+      <input type="button" value="Mandefa" id="game-of-life-start">
+      <input type="button" value="Mamerina" id="game-of-life-reset">
+    </div>
+  </div>
+
   <!-- Racing Modal -->
   <div class="racing-modal">
     <div class="overlay"></div>
@@ -350,7 +366,9 @@
     </div>
     <p class="copyright">&copy;Daatoa-Raketaka 2023</p>
   </footer>
+
   <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/assets/js/gameOfLife.js"></script>
 </body>
 
 </html>
