@@ -18,6 +18,11 @@
     display: grid;
     grid-template-columns: auto 250px;
     grid-template-rows: auto;
+    background-image: url("/our-games-gradient.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-block: 30px;
 
     @media screen and (max-width: 1024px) {
       display: block;
