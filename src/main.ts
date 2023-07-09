@@ -7,6 +7,7 @@ import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingM
 import { exitPlatformerModal, hidePlatformerModal, platformerModalOverlay, playPlatformerModal, showPlatformerModal } from './modules/platformer-modal.module'
 import { scrollToTop, scrollToTopBtn } from './modules/scroll-to-top.module'
 import { desktopThemeBtn, detectTheme, mobileThemeBtn, toggleTheme } from './modules/theme.module'
+import { initSlider } from './modules/slider.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -29,6 +30,9 @@ window.addEventListener('load', () => {
   initAnimation()
   initMouse()
   initScroll()
+  initSlider()
+
+  window.addEventListener('resize', initSlider)
 })
 
 function main() {

@@ -1,0 +1,23 @@
+.slider {
+    // overflow-x: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    margin: 50px 0px;
+
+    .carousel {
+        position: absolute;
+        display: flex;
+        padding: 20px;
+        gap: 20px;
+        transform: rotateZ(5deg);
+        
+        img {
+            width: 100px;
+            padding: 20px;
+            border-radius: 30px;
+            background-color: $grey;
+        }
+    }
+}

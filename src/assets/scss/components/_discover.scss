@@ -1,0 +1,48 @@
+.discover {
+    max-width: 100vw;
+    max-height: 100vh;
+    height: auto;
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bobolilita {
+        border-radius: 50px;
+        width: 100%;
+        height: 80vh;
+        background-color: rgb(182, 132, 26);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 50px;
+        background-image: url(/public/bobolilita.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        h1 {
+            font-family: "Clash Display", sans-serif;
+            width: 500px;
+            font-size: 50px;
+        }
+
+        button {
+            width: max-content;
+            position: relative;
+            height: max-content;
+            padding: 10px 20px;
+            background: linear-gradient(30deg, $blue, $red);
+            background-repeat: no-repeat;
+            border: none;
+            font-size: 20px;
+            font-family: "Clash Display", sans-serif;
+            font-weight: 600;
+            border-radius: 20px;
+            color: $white;
+            cursor: pointer;
+            transition: all .2s ease-in-out;
+            margin: 50px 0px;
+        }
+    }
+}
