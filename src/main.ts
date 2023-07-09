@@ -6,6 +6,7 @@ import { initMouse } from './modules/mouse.module'
 import { exitRacingModal, hideRacingModal, playRacingModal, racingModal, racingModalOverlay, showRacingModal } from './modules/racing-modal.module'
 import { exitPlatformerModal, hidePlatformerModal, platformerModalOverlay, playPlatformerModal, showPlatformerModal } from './modules/platformer-modal.module'
 import { scrollToTop, scrollToTopBtn } from './modules/scroll-to-top.module'
+import { desktopThemeBtn, detectTheme, mobileThemeBtn, toggleTheme } from './modules/theme.module'
 
 window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay') as HTMLElement
@@ -31,6 +32,7 @@ window.addEventListener('load', () => {
 })
 
 function main() {
+  detectTheme()
   burgerBtn.addEventListener('click', () => activateMobileNavbar(mobileNavbar))
   exitMobileNavbar.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
   mobileComingSoon.addEventListener('click', () => deactivateMobileNavbar(mobileNavbar))
@@ -70,6 +72,9 @@ function main() {
   playPlatformerModal.addEventListener('click', hidePlatformerModal)
 
   scrollToTopBtn.addEventListener('click', scrollToTop)
+
+  desktopThemeBtn.addEventListener('click', toggleTheme)
+  mobileThemeBtn.addEventListener('click', toggleTheme)
 }
 
 main()

@@ -10,3 +10,33 @@ $snake-card-color: #63c024;
 $flappy-bird-card-color: #dfc52d;
 $contra-game-card-color: #75030e;
 $super-mario-card-color: #4e83dd;
+
+:root {
+  --black: #0a0a0a;
+  --white: #fff;
+  --red: rgb(231, 33, 59);
+  --blue: rgb(0, 110, 255);
+  --purple: rgb(128, 0, 255);
+  --light-blue: #00e9ed;
+  --yellow: #fbbc06;
+  --grey: #161c23;
+  --snake-card-color: #63c024;
+  --flappy-bird-card-color: #dfc52d;
+  --contra-game-card-color: #75030e;
+  --super-mario-card-color: #4e83dd;
+}
+
+.light:root {
+  --black: #fff;
+  --white: #0a0a0a;
+  --red: rgb(231, 33, 59);
+  --blue: rgb(0, 110, 255);
+  --purple: rgb(128, 0, 255);
+  --light-blue: #00e9ed;
+  --yellow: #fbbc06;
+  --grey: #fff;
+  --snake-card-color: #63c024;
+  --flappy-bird-card-color: #dfc52d;
+  --contra-game-card-color: #75030e;
+  --super-mario-card-color: #4e83dd;
+}

@@ -1,5 +1,11 @@
 @import "../partials/colors";
 
+.light {
+  .scroll-to-top {
+    color: var(--black);
+  }
+}
+
 .scroll-to-top {
   position: fixed;
   bottom: 20px;
@@ -15,10 +21,11 @@
   cursor: pointer;
   transition: all .2s ease-in-out;
   border: 1.5px solid transparent;
+  mix-blend-mode: difference;
+  color: var(--white);
 
   &:hover {
     backdrop-filter: invert(0);
-    mix-blend-mode: difference;
     color: $white;
     border-color: $white;
   }
