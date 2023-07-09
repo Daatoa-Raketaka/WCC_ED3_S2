@@ -1,0 +1,46 @@
+#content {
+    right: 5vw;
+    left: 5vw;
+}
+
+#content-sub-container {
+    position: relative;
+    max-width: 100vw;
+    min-height: 100vh;
+    max-height: 100vh;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+h1 {
+    text-shadow: 0px 0px 20px var(--blue);
+    font-size: 5vw;
+    margin: 5vh 0;
+    margin-bottom: 3vh;
+}
+
+.content-subtitle-3 {
+    text-shadow: 0px 0px 20px var(--blue);
+    font-size: 2.5vw;
+    margin: 2vh 0;
+}
+
+#content-sub-container p {
+    color: var(--white);
+    font-size: 2vw;
+}
+
+#content-sub-container .video-container {
+    position: relative;
+    width: 100vw;
+    margin-top: 5vh;
+}
+
+.video-container video {
+    position: relative;
+    width: 80%;
+    border-radius: 10px;
+    margin-left: -10vw;
+    margin-bottom: 5vh;
+}

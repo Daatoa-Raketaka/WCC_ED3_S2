@@ -1,0 +1,13 @@
+div.center {
+   display: flex; 
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   min-height: 95vh;
+}
+
+#canv {
+    width: 800px;
+    height: 600px;
+    background-color: yellowgreen;
+}

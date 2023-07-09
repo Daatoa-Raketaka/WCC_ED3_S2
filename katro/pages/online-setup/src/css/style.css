@@ -1,0 +1,73 @@
+#bg-img-container svg {
+    fill: #ffffff44;
+    filter: drop-shadow(0px 0px 20px var(--dark));
+}
+
+h1 {
+    font-size: 5vw;
+    color: var(--white);
+}
+
+#content div { margin: 1vw; }
+
+#content div input {
+    font-size: 2vw;
+    visibility: hidden;
+}
+
+.room-btn,
+#content div input {
+    border: none;
+    font-size: 2vw;
+    padding: 5px 10px;
+    background-color: transparent;
+    color: var(--white);
+    margin-right: 1vw;
+    outline-style: solid;
+    outline-width: 0.5px;
+    outline-color: var(--white);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+.room-btn:hover {
+    background-color: var(--dark);
+    outline: none;
+}
+
+#content div input::placeholder { 
+    color: #f7f7f7;
+    font-size: 1.8vw;
+}
+
+.room-btn:disabled {
+    color: var(--dark);
+    background-color: transparent;
+    outline: none;
+    cursor: not-allowed;
+}
+
+#key-cont {
+    visibility: hidden;
+}
+
+#key {
+    color: var(--dark);
+    font-size: large;
+}
+
+.work-on {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--dark), #aaaaaa88, var(--dark));
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+a {
+    text-decoration: none;
+}

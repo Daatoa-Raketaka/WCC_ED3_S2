@@ -1,0 +1,100 @@
+.switch-view-button {
+    margin: 3vw;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.switch {
+    width: 40px;
+    height: 20px;
+    background-color: var(--dark);
+    border-radius: 10px;
+}
+
+.switch > div {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    margin: 1px;
+    border-radius: 9px;
+    background-color: var(--white);
+    transition: transform 0.5s;
+}
+
+.view-flip {
+    position: relative;
+    width: 850px;
+    height: 680px;
+    background-color: transparent;
+    perspective: 1000px;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 5px #2e221f44;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 650px) { 
+    .view-flip { 
+        width: 100%; 
+        height: 480px;
+    } 
+}
+
+@media screen and (min-width: 650px) and (max-width: 800px) { 
+    .view-flip { 
+        width: 80%; 
+        height: 500px;
+    } 
+}
+
+.view-2D,
+.view-3D {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: #ffffff22;
+    border-radius: 10px;
+}
+
+.view-3D { 
+    transform: rotateY(180deg); 
+    /* background: linear-gradient(to top, #2e221f88, #aaaaaa88, #2e221f88); */
+}
+
+#menu-modal, #game-over-modal, #win-modal { visibility: hidden; }
+
+.menu-btn {
+    width: 300px;
+    text-align: center;
+    font-size: 26px;
+    outline: none;
+}
+
+#wait { 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, var(--dark), #aaaaaa88, var(--dark));
+    z-index: -1;
+}
+
+/* ONLINE */
+
+#online-cont {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
+}
+
+#work-on {
+    z-index: -2;
+}

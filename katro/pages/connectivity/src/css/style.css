@@ -1,0 +1,44 @@
+#bg-img-container svg {
+    width: 50vw;
+    height: 50vw;
+    fill: #ffffff33;
+    filter: drop-shadow(0px 0px 20px var(--dark));
+}
+#content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 5vw;
+    color: var(--white);
+}
+
+#connecti-mode-container { margin-top: 2vh; }
+
+#connecti-mode-container div svg {
+    width: 2.5vw;
+    height: 2.5vw;
+    fill: var(--white);
+}
+
+#connecti-mode-container div button {
+    border: none;
+    background-color: transparent;
+    color: var(--white);
+    font-size: 2vw;
+    margin: 1vw;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+#connecti-mode-container div button:hover {
+    color: var(--dark);
+}

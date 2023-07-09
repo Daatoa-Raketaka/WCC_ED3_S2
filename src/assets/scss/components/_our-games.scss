@@ -252,6 +252,15 @@
         }
       }
 
+      &:nth-child(4) {
+        .img {
+          background-image: url("/tictactoe.png");
+          background-position: bottom center;
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+
       .rank {
         position: absolute;
         top: 0;

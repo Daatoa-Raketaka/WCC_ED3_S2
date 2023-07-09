@@ -1,0 +1,19 @@
+body{
+    background-color: #404040;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    transition: 500ms ease-in-out;
+}
+
+h1:hover{
+    text-shadow: 0 0 25px #4fbef2;
+    color: white;
+    transition: 500ms ease-in-out;
+}
+
+button{
+    padding: 50px;
+    outline: none;
+}

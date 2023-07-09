@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <center>
+        <h1>TicTacToe</h1>
+        <table border="2" ></table>
+        <button onclick="location.href='/#our-games'">Hiverina</button>
+    </center>
+
+    <script src="./script.js"></script>
+    <script>
+        let table = document.getElementsByTagName("table")[0];
+        for(let i=0; i<MAX; i++){
+            let tr = document.createElement("tr");
+            for(let j=0; j<MAX; j++){
+                let td = document.createElement("td");
+                td.innerHTML = '<button onclick="play('+(j+i*MAX)+')" ></button>';
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+    </script>
+</body>
+</html>
