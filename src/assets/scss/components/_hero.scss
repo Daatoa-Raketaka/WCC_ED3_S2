@@ -1,3 +1,5 @@
+@import "../partials/colors";
+
 div.hero {
     display: flex;
     flex-direction: column;
@@ -9,7 +11,16 @@ div.hero {
     text-align: center;
 
     p { font-size: 30px; }
-    h1 { font-size: 70px; }
+    h1 {
+        font-size: 70px;
+
+        .gradient {
+            background: linear-gradient(to right, $red, $purple, $blue);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
 
     @media screen and (max-width: 1024px) {
         p { font-size: 20px; }
